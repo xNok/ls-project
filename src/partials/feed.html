@@ -1,0 +1,36 @@
+<div class="ui large feed">
+
+{% for event in events %}
+  <div class="event">
+    <div class="label">
+      <i class="{{ event.icon }} icon"></i>
+    </div>
+    <div class="content">
+      <div class="summary">
+        {{ event.action }}
+        <div class="date">
+          {{ event.timestamp }}
+        </div>
+      </div>
+      <div class="extra text">
+        {{ event.title }}
+      </div>
+      <div class="meta">
+        {% if  event.cites %}
+          <a class="like">
+            <i class="reply icon"></i> {{event.cites}} References
+          </a>
+          <a class="like">
+            <i class="share icon"></i> {{event.cited}} Cited by
+          </a>
+        {% endif %}
+        {% if  event.highlight %}
+          <a class="like">
+            <i class="comment icon"></i> {{event.highlight}} highlight
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div>

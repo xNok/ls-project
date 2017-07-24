@@ -1,23 +1,26 @@
 {% extends "./templates/base.html" %}
 
+{% block page %}
 <div class="ui celled grid">
   <div class="row">
     <div class="three wide column">
-<img class="ui wireframe image" src="/image/centered-paragraph.png">
+      <img class="ui wireframe image" src="/image/image.png">
     </div>
     <div class="thirteen wide column">
-      <p></p>
+      <img class="ui wireframe image" src="/image/centered-paragraph.png">
     </div>
   </div>
   <div class="row">
-    <div class="three wide column">
-      <img>
+    <div class="four wide column">
+      <img class="ui wireframe image" src="/image/image.png">
     </div>
-    <div class="ten wide column">
-      <p></p>
+    <div class="eight wide column">
+      {% include "partials/feed.html" %}
     </div>
-    <div class="three wide column">
-      <img>
+    <div class="four wide column">
+      <h2>Connectivity</h2>
+      <img class="ui wireframe image" src="/image/image.png">
     </div>
   </div>
 </div>
+{% endblock %}
